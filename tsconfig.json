@@ -4,7 +4,9 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -13,9 +15,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "sourceRoot": "/",
     "incremental": true,
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "*": ["./src/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
