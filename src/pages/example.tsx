@@ -1,13 +1,13 @@
 import { TextInput } from '@mantine/core';
+import Form from 'components/elements/form';
+import useYupValidationResolver from 'hooks/use-yup-validation-resolver';
+import * as React from 'react';
 import { useController, useForm, useFormContext } from 'react-hook-form';
 import * as Yup from 'yup';
 
 interface Props {
   name: string;
 }
-import * as React from 'react';
-import useYupValidationResolver from 'hooks/use-yup-validation-resolver';
-import Form from 'components/elements/form';
 function TextInputTest(props: Props) {
   const { name } = props;
   const { control } = useFormContext();
