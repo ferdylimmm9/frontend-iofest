@@ -2,7 +2,6 @@ import {
   CSS as StitchesCss,
   createStitches as createCss,
 } from '@stitches/react';
-
 import colors from 'common/styles/colors';
 export type { VariantProps } from '@stitches/react';
 
@@ -12,10 +11,11 @@ const stitches = createCss({
     fontWeights: {
       regular: '400',
       bold: '700',
+      medium: '500',
+      light: '300',
     },
     fonts: {
-      montserrat: 'Montserrat',
-      sourceSansPro: 'Source Sans Pro',
+      rubik: 'Rubik',
     },
     fontSizes: {
       xxs: '12px',
@@ -75,12 +75,6 @@ const stitches = createCss({
     xl: '(min-width: 1200px)',
   },
   utils: {
-    // p: (value: any) => ({
-    //   paddingTop: value,
-    //   paddingBottom: value,
-    //   paddingLeft: value,
-    //   paddingRight: value,
-    // }),
     pt: (value: any) => ({
       paddingTop: value,
     }),

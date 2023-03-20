@@ -1,55 +1,62 @@
-import { TextInput } from '@mantine/core';
-import Form from 'components/elements/form';
-import useYupValidationResolver from 'hooks/use-yup-validation-resolver';
+import Separator from 'components/common/separator';
+import Text from 'components/common/text';
 import * as React from 'react';
-import { useController, useForm, useFormContext } from 'react-hook-form';
-import * as Yup from 'yup';
-
-interface Props {
-  name: string;
-}
-function TextInputTest(props: Props) {
-  const { name } = props;
-  const { control } = useFormContext();
-  const { field, fieldState } = useController({
-    name,
-    control,
-  });
-
-  console.log(field.value, fieldState.error);
-
-  return (
-    <TextInput
-      placeholder="test"
-      label="mencoba"
-      withAsterisk
-      onChange={field.onChange}
-      value={field.value}
-      error={fieldState.error?.message}
-    />
-  );
-}
 
 export default function ExamplePages() {
-  const defaultValues = React.useMemo(() => ({ test: '' }), []);
-  const yupSchema = React.useMemo(
-    () => Yup.object().shape({ test: Yup.string().required() }),
-    [],
-  );
-  const resolver = useYupValidationResolver(yupSchema);
-  const methods = useForm({
-    defaultValues,
-    resolver,
-    mode: 'all',
-  });
-
-  const onSubmit = React.useCallback((values) => {
-    console.log(values);
-  }, []);
-
   return (
-    <Form methods={methods} onSubmit={onSubmit}>
-      <TextInputTest name="test" />
-    </Form>
+    <div style={{ background: 'white' }}>
+      <Separator gap={16} direction="vertical">
+        === Body ===
+        <Text variant="body1Light">Body 1 Light</Text>
+        <Text variant="body2Light">Body 2 Light</Text>
+        <Text variant="body3Light">Body 3 Light</Text>
+        <Text variant="body1Regular">Body 1 Regular</Text>
+        <Text variant="body2Regular">Body 2 Regular</Text>
+        <Text variant="body3Regular">Body 3 Regular</Text>
+        <Text variant="body1Medium">Body 1 Medium</Text>
+        <Text variant="body2Medium">Body 2 Medium</Text>
+        <Text variant="body3Medium">Body 3 Medium</Text>
+      </Separator>
+      <Separator gap={16} direction="vertical">
+        === Caption ===
+        <Text variant="caption1Light">Caption 1 Light</Text>
+        <Text variant="caption2Light">Caption 2 Light</Text>
+        <Text variant="caption3Light">Caption 3 Light</Text>
+        <Text variant="caption1Regular">Caption 1 Regular</Text>
+        <Text variant="caption2Regular">Caption 2 Regular</Text>
+        <Text variant="caption3Regular">Caption 3 Regular</Text>
+        <Text variant="caption1Medium">Caption 1 Medium</Text>
+        <Text variant="caption2Medium">Caption 2 Medium</Text>
+        <Text variant="caption3Medium">Caption 3 Medium</Text>
+      </Separator>
+      <Separator gap={16} direction="vertical">
+        === Heading ===
+        <Text variant="heading1Light" color="error">
+          Heading 1 Light
+        </Text>
+        <Text variant="heading2Light">Heading 1 Light</Text>
+        <Text variant="heading3Light">Heading 1 Light</Text>
+        <Text variant="heading4Light">Heading 1 Light</Text>
+        <Text variant="heading5Light">Heading 1 Light</Text>
+        <Text variant="heading6Light">Heading 1 Light</Text>
+        <Text variant="heading1Regular">Heading 1 Regular</Text>
+        <Text variant="heading2Regular">Heading 2 Regular</Text>
+        <Text variant="heading3Regular">Heading 3 Regular</Text>
+        <Text variant="heading4Regular">Heading 4 Regular</Text>
+        <Text variant="heading5Regular">Heading 5 Regular</Text>
+        <Text variant="heading6Regular">Heading 6 Regular</Text>
+        <Text variant="heading1Medium">Heading 1 Medium</Text>
+        <Text variant="heading2Medium">Heading 2 Medium</Text>
+        <Text variant="heading3Medium">Heading 3 Medium</Text>
+        <Text variant="heading4Medium">Heading 4 Medium</Text>
+        <Text variant="heading5Medium">Heading 5 Medium</Text>
+        <Text variant="heading6Medium">Heading 6 Medium</Text>
+      </Separator>
+      <Separator gap={16} direction="vertical">
+        === Button Text ===
+        <Text variant="buttonDefault">Button Default</Text>
+        <Text variant="buttonSmall">Button Small</Text>
+      </Separator>
+    </div>
   );
 }

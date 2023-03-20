@@ -163,7 +163,7 @@ const typography = {
     fontWeight: 300,
     lineHeight: '14px',
   },
-  captionLight1: {
+  caption1Light: {
     fontFamily,
     fontSize: '12px',
     fontWeight: 300,
@@ -242,6 +242,18 @@ const typography = {
     fontSize: '56px',
     fontWeight: 500,
     lineHeight: '66px',
+  },
+  buttonDefault: {
+    fontFamily,
+    fontSize: '14px',
+    fontWeight: 600,
+    lineHeight: '20px',
+  },
+  buttonSmall: {
+    fontFamily,
+    fontSize: '12px',
+    fontWeight: 600,
+    lineHeight: '16px',
   },
 };
 

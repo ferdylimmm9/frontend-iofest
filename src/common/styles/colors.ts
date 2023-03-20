@@ -1,4 +1,12 @@
 const colors = {
+  primary: '#181818',
+  secondary: '#F8FA71',
+  tertiary: '#FFFFFF',
+  neutral: '#828181',
+  success: '#00972A',
+  warning: '#FEF40A',
+  error: '#B50000',
+
   productLight: '#CFF1F1',
   productLightHover: '#C4EEEE',
   productLightActive: '#B4E9E9',
