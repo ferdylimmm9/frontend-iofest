@@ -1,92 +1,247 @@
-const defaultFontFamily = 'Inter';
-const monoFontFamily = 'DM Mono';
+const fontFamily = 'Rubik';
 
 const typography = {
-  HeadingLarge: {
-    fontFamily: defaultFontFamily,
-    fontSize: '28px',
-    fontWeight: 700,
+  heading1Regular: {
+    fontFamily,
+    fontSize: '48px',
+    fontWeight: 400,
+    lineHeight: '57px',
+  },
+  heading2Regular: {
+    fontFamily,
+    fontSize: '40px',
+    fontWeight: 400,
+    lineHeight: '47px',
+  },
+  heading3Regular: {
+    fontFamily,
+    fontSize: '32px',
+    fontWeight: 400,
+    lineHeight: '45px',
+  },
+  heading4Regular: {
+    fontFamily,
+    fontSize: '24px',
+    fontWeight: 400,
+    lineHeight: '34px',
+  },
+  heading5Regular: {
+    fontFamily,
+    fontSize: '20px',
+    fontWeight: 400,
     lineHeight: '28px',
   },
-  HeadingMedium: {
-    fontFamily: defaultFontFamily,
-    fontSize: '22px',
-    fontWeight: 700,
+  heading6Regular: {
+    fontFamily,
+    fontSize: '16px',
+    fontWeight: 400,
     lineHeight: '22px',
   },
-  HeadingSmall: {
-    fontFamily: defaultFontFamily,
-    fontSize: '18px',
-    fontWeight: 700,
-    lineHeight: '18px',
+  heading1Light: {
+    fontFamily,
+    fontSize: '48px',
+    fontWeight: 300,
+    lineHeight: '57px',
   },
-  BodyBoldDefault: {
-    fontFamily: defaultFontFamily,
-    fontSize: '14px',
-    fontWeight: 600,
+  heading2Light: {
+    fontFamily,
+    fontSize: '40px',
+    fontWeight: 300,
+    lineHeight: '47px',
+  },
+  heading3Light: {
+    fontFamily,
+    fontSize: '32px',
+    fontWeight: 300,
+    lineHeight: '38px',
+  },
+  heading4Light: {
+    fontFamily,
+    fontSize: '24px',
+    fontWeight: 300,
+    lineHeight: '28px',
+  },
+  heading5Light: {
+    fontFamily,
+    fontSize: '20px',
+    fontWeight: 300,
     lineHeight: '24px',
   },
-  BodyBoldSmaller: {
-    fontFamily: defaultFontFamily,
-    fontSize: '12px',
-    fontWeight: 600,
-    lineHeight: '20px',
+  heading6Light: {
+    fontFamily,
+    fontSize: '16px',
+    fontWeight: 300,
+    lineHeight: '19px',
   },
-  BodyBoldSmallest: {
-    fontFamily: defaultFontFamily,
-    fontSize: '10px',
-    fontWeight: 600,
-    lineHeight: '16px',
+  heading1Medium: {
+    fontFamily,
+    fontSize: '48px',
+    fontWeight: 500,
+    lineHeight: '57px',
   },
-  BodyDefault: {
-    fontFamily: defaultFontFamily,
-    fontSize: '14px',
-    fontWeight: 400,
+  heading2Medium: {
+    fontFamily,
+    fontSize: '40px',
+    fontWeight: 500,
+    lineHeight: '47px',
+  },
+  heading3Medium: {
+    fontFamily,
+    fontSize: '32px',
+    fontWeight: 500,
+    lineHeight: '45px',
+  },
+  heading4Medium: {
+    fontFamily,
+    fontSize: '24px',
+    fontWeight: 500,
+    lineHeight: '28px',
+  },
+  heading5Medium: {
+    fontFamily,
+    fontSize: '20px',
+    fontWeight: 500,
     lineHeight: '24px',
   },
-  BodySmaller: {
-    fontFamily: defaultFontFamily,
+  heading6Medium: {
+    fontFamily,
+    fontSize: '16px',
+    fontWeight: 500,
+    lineHeight: '22px',
+  },
+  body1Regular: {
+    fontFamily,
+    fontSize: '16px',
+    fontWeight: 400,
+    lineHeight: '21px',
+  },
+  body2Regular: {
+    fontFamily,
+    fontSize: '14px',
+    fontWeight: 400,
+    lineHeight: '17px',
+  },
+  body3Regular: {
+    fontFamily,
     fontSize: '12px',
     fontWeight: 400,
-    lineHeight: '20px',
+    lineHeight: '16px',
   },
-  BodySmallest: {
-    fontFamily: defaultFontFamily,
+  caption1Regular: {
+    fontFamily,
+    fontSize: '12px',
+    fontWeight: 400,
+    lineHeight: '14px',
+  },
+  caption2Regular: {
+    fontFamily,
     fontSize: '10px',
     fontWeight: 400,
-    lineHeight: '16px',
+    lineHeight: '13px',
   },
-  ButtonDefault: {
-    fontFamily: defaultFontFamily,
+  caption3Regular: {
+    fontFamily,
+    fontSize: '8px',
+    fontWeight: 400,
+    lineHeight: '9px',
+  },
+  body1Light: {
+    fontFamily,
+    fontSize: '16px',
+    fontWeight: 300,
+    lineHeight: '19px',
+  },
+  body2Light: {
+    fontFamily,
     fontSize: '14px',
-    fontWeight: 600,
-    lineHeight: '20px',
+    fontWeight: 300,
+    lineHeight: '17px',
   },
-  ButtonSmall: {
-    fontFamily: defaultFontFamily,
+  body3Light: {
+    fontFamily,
     fontSize: '12px',
-    fontWeight: 600,
-    lineHeight: '16px',
+    fontWeight: 300,
+    lineHeight: '14px',
+  },
+  captionLight1: {
+    fontFamily,
+    fontSize: '12px',
+    fontWeight: 300,
+    lineHeight: '14px',
+  },
+  caption2Light: {
+    fontFamily,
+    fontSize: '10px',
+    fontWeight: 300,
+    lineHeight: '12px',
+  },
+  caption3Light: {
+    fontFamily,
+    fontSize: '8px',
+    fontWeight: 300,
+    lineHeight: '9px',
+  },
+  body1Medium: {
+    fontFamily,
+    fontSize: '16px',
+    fontWeight: 500,
+    lineHeight: '19px',
+  },
+  body2Medium: {
+    fontFamily,
+    fontSize: '14px',
+    fontWeight: 500,
+    lineHeight: '17px',
   },
 
-  // MONO
-  MonoDefault: {
-    fontFamily: monoFontFamily,
-    fontSize: '14px',
-    fontWeight: 400,
-    lineHeight: '24px',
-  },
-  MonoSmaller: {
-    fontFamily: monoFontFamily,
+  body3Medium: {
+    fontFamily,
     fontSize: '12px',
-    fontWeight: 400,
-    lineHeight: '20px',
+    fontWeight: 500,
+    lineHeight: '14px',
   },
-  MonoSmallest: {
-    fontFamily: monoFontFamily,
+  caption1Medium: {
+    fontFamily,
+    fontSize: '12px',
+    fontWeight: 500,
+    lineHeight: '14px',
+  },
+  caption2Medium: {
+    fontFamily,
     fontSize: '10px',
-    fontWeight: 400,
-    lineHeight: '16px',
+    fontWeight: 500,
+    lineHeight: '12px',
+  },
+  caption3Medium: {
+    fontFamily,
+    fontSize: '8px',
+    fontWeight: 500,
+    lineHeight: '9px',
+  },
+
+  display1Light: {
+    fontFamily,
+    fontSize: '72px',
+    fontWeight: 300,
+    lineHeight: '85px',
+  },
+  display2Light: {
+    fontFamily,
+    fontSize: '56px',
+    fontWeight: 300,
+    lineHeight: '66px',
+  },
+  display1Medium: {
+    fontFamily,
+    fontSize: '72px',
+    fontWeight: 500,
+    lineHeight: '85px',
+  },
+  display2Medium: {
+    fontFamily,
+    fontSize: '56px',
+    fontWeight: 500,
+    lineHeight: '66px',
   },
 };
 
