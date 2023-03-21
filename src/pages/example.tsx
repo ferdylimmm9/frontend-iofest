@@ -1,5 +1,7 @@
+import * as Icon from '@phosphor-icons/react';
 import Separator from 'components/common/separator';
 import Text from 'components/common/text';
+import Button from 'components/elements/button';
 import * as React from 'react';
 
 export default function ExamplePages() {
@@ -56,6 +58,31 @@ export default function ExamplePages() {
         === Button Text ===
         <Text variant="buttonDefault">Button Default</Text>
         <Text variant="buttonSmall">Button Small</Text>
+      </Separator>
+      <Separator gap={16} direction="vertical">
+        <Button
+          variant="secondary"
+          size="medium"
+          onRenderLeft={<Icon.CaretDown />}
+        >
+          Test
+        </Button>
+        <Button
+          variant="primary"
+          size="medium"
+          onRenderRight={<Icon.CaretDown />}
+        >
+          Test
+        </Button>
+        <Button variant="wbPrimary" size="medium">
+          Test
+        </Button>
+        <Button variant="secondary" size="medium">
+          Test
+        </Button>
+        <Button variant="tertiary" size="medium">
+          test
+        </Button>
       </Separator>
     </div>
   );

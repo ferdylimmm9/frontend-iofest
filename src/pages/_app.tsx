@@ -1,18 +1,19 @@
 import 'styles/globals.css';
-import type { AppProps } from 'next/app';
-import { useRouter } from 'next/router';
-import * as React from 'react';
-import { setLocale } from 'yup';
-import yupEnValidation from 'locales/en/validation.yup';
-import yupIdValidation from 'locales/id/validation.yup';
-import appWithI18n from 'next-translate/appWithI18n';
-import i18nConfig from '../../i18n';
-import merge from 'lodash/merge';
-import colors from 'common/styles/colors';
 import { MantineProvider, TypographyStylesProvider } from '@mantine/core';
 import { NotificationsProvider } from '@mantine/notifications';
-import { queryClient } from 'common/repositories/query-client';
 import { QueryClientProvider } from '@tanstack/react-query';
+import { queryClient } from 'common/repositories/query-client';
+import colors from 'common/styles/colors';
+import yupEnValidation from 'locales/en/validation.yup';
+import yupIdValidation from 'locales/id/validation.yup';
+import merge from 'lodash/merge';
+import type { AppProps } from 'next/app';
+import { useRouter } from 'next/router';
+import appWithI18n from 'next-translate/appWithI18n';
+import * as React from 'react';
+import { setLocale } from 'yup';
+
+import i18nConfig from '../../i18n';
 
 function App({ Component, pageProps }: AppProps) {
   const { locale } = useRouter();
@@ -33,22 +34,7 @@ function App({ Component, pageProps }: AppProps) {
       <MantineProvider
         withGlobalStyles
         withNormalizeCSS
-        theme={{
-          colors: {
-            product: [
-              colors.productLight,
-              colors.productLightActive,
-              colors.productLightHover,
-              colors.productDark,
-              colors.productDarkActive,
-              colors.productDarkHover,
-              colors.productNormal,
-              colors.productNormalActive,
-              colors.productNormalHover,
-            ],
-          },
-          primaryColor: 'product',
-        }}
+        theme={{ fontFamily: 'Rubik' }}
       >
         <TypographyStylesProvider>
           <NotificationsProvider
