@@ -24,7 +24,6 @@ export const Row = styled('div', {
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
-  justifyContent: 'space-between',
 });
 
 export const HalfContainer = styled('div', {
@@ -37,8 +36,9 @@ export const HalfContainer = styled('div', {
 export const SectionContainer = styled('div', {
   flex: 1,
   display: 'flex',
-  justifyContent: 'space-between',
   flexDirection: 'column',
+  justifyContent: 'space-between',
+  alignItems: 'center',
   '@lg': {
     flexDirection: 'row',
   },

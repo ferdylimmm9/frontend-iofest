@@ -7,11 +7,12 @@ export const LoginContainer = styled('div', {
 
   px: 16,
   py: 32,
-  minWidth: 'initial',
+
+  width: '100%',
 
   '@sm': {
+    maxWidth: '514px',
     mx: 'auto',
-    minWidth: '514px',
   },
   '@md': {
     px: 32,
@@ -20,7 +21,7 @@ export const LoginContainer = styled('div', {
 });
 
 export const FullScreen = styled('div', {
-  position: 'absolute',
+  position: 'relative',
   top: 0,
   left: 0,
   right: 0,

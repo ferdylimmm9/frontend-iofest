@@ -3,6 +3,7 @@ import Text from 'components/common/text';
 import Button from 'components/elements/button';
 import Input from 'components/elements/field';
 import Form from 'components/elements/form';
+import Header from 'components/widgets/header';
 import useYupValidationResolver from 'hooks/use-yup-validation-resolver';
 import * as React from 'react';
 import { useForm } from 'react-hook-form';
@@ -43,45 +44,49 @@ export default function Login() {
   }, []);
 
   return (
-    <FullScreen>
-      <LoginContainer>
-        <Form methods={methods} onSubmit={onSubmit}>
-          <Text variant="heading3Medium">Login</Text>
-          <Separator gap={32} />
+    <>
+      <Header />
+      <Separator gap={24} />
+      <FullScreen>
+        <LoginContainer>
+          <Form methods={methods} onSubmit={onSubmit}>
+            <Text variant="heading3Medium">Login</Text>
+            <Separator gap={32} />
 
-          <Input
-            type="text"
-            name="email"
-            label="Email Address"
-            placeholder="email"
-            description="markdown"
-          />
-          <Separator gap={24} />
+            <Input
+              type="text"
+              name="email"
+              label="Email Address"
+              placeholder="email"
+              description="markdown"
+            />
+            <Separator gap={24} />
 
-          <Input
-            type="password"
-            name="password"
-            label="Password"
-            placeholder="password"
-            description="markdown"
-          />
+            <Input
+              type="password"
+              name="password"
+              label="Password"
+              placeholder="password"
+              description="markdown"
+            />
 
-          <Separator gap={32} />
+            <Separator gap={32} />
 
-          <Button variant="wbPrimary" css={style.buttonContainer}>
-            Login
-          </Button>
-          <Separator gap={24} />
+            <Button variant="wbPrimary" css={style.buttonContainer}>
+              Login
+            </Button>
+            <Separator gap={24} />
 
-          <Text variant="heading6Regular">Don't have an account</Text>
-          <Separator gap={4} />
+            <Text variant="heading6Regular">Don't have an account</Text>
+            <Separator gap={4} />
 
-          <Button variant="wbSecondary" css={style.buttonContainer}>
-            Sign up
-          </Button>
-        </Form>
-      </LoginContainer>
-    </FullScreen>
+            <Button variant="wbSecondary" css={style.buttonContainer}>
+              Sign up
+            </Button>
+          </Form>
+        </LoginContainer>
+      </FullScreen>
+    </>
   );
 }
 

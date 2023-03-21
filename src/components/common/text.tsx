@@ -61,25 +61,25 @@ const StyledText = styled(DEFAULT_TAG, {
     },
     color: {
       primary: {
-        color: '$primary500',
+        color: '$primary',
       },
       secondary: {
-        color: '$secondary500',
+        color: '$secondary',
       },
       tertiary: {
-        color: '$tertiary500',
+        color: '$tertiary',
       },
       neutral: {
-        color: '$neutral500',
+        color: '$neutral',
       },
       success: {
-        color: '$success500',
+        color: '$success',
       },
       warning: {
-        color: '$warning500',
+        color: '$warning',
       },
       error: {
-        color: '$error500',
+        color: '$error',
       },
       black: {
         color: '$black',
