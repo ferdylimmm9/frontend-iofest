@@ -1,20 +1,21 @@
 import { Burger } from '@mantine/core';
-import { styles } from 'modules/common/styles';
+import { commonStyles } from 'modules/common/styles';
 import Link from 'next/link';
 import { styled } from 'styles';
 
 export const HeaderOuterContainer = styled('header', {
-  position: 'sticky',
+  position: 'fixed',
   left: 0,
   top: 0,
   right: 0,
   display: 'flex',
   justifyContent: 'center',
   backgroundColor: '$black',
+  zIndex: 10,
 });
 
 export const HeaderInnerContainer = styled('nav', {
-  ...styles.breakpointsCss,
+  ...commonStyles.breakpointsCss,
   display: 'flex',
   flexDirection: 'row',
   alignItems: 'center',
@@ -27,6 +28,8 @@ export const BrandContainer = styled('div', {});
 export const DesktopNavigationContainer = styled('div', {
   flexDirection: 'row',
   gap: '24px',
+  flex: 1,
+  justifyContent: 'flex-end',
   display: 'none',
   '@md': {
     display: 'flex',

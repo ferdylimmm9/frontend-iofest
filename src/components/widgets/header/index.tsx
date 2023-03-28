@@ -1,6 +1,7 @@
 import { Drawer } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import colors from 'common/styles/colors';
+import Separator from 'components/common/separator';
 import Text from 'components/common/text';
 import Button from 'components/elements/button';
 import Link from 'next/link';
@@ -45,6 +46,7 @@ export default function Header() {
           <BurgerButton opened={opened} onClick={toggle} color={colors.white} />
         </HeaderInnerContainer>
       </HeaderOuterContainer>
+      <Separator gap={80} />
       <Drawer
         opened={opened}
         onClose={close}

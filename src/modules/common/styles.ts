@@ -1,6 +1,6 @@
 import { styled } from 'styles';
 
-export const styles = {
+export const commonStyles = {
   breakpointsCss: {
     width: '100%',
     px: 16,
@@ -42,4 +42,9 @@ export const SectionContainer = styled('div', {
   '@lg': {
     flexDirection: 'row',
   },
+});
+
+export const PageContainer = styled('div', {
+  ...commonStyles.breakpointsCss,
+  margin: 'auto',
 });

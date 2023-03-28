@@ -5,6 +5,15 @@ const { defaultLocale, locales } = require('./i18n');
 const nextConfig = {
   reactStrictMode: true,
   i18n: { locales, defaultLocale },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '*',
+        port: '',
+      },
+    ],
+  },
 };
 
 module.exports = nextConfig;

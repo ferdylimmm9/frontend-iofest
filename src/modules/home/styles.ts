@@ -1,4 +1,4 @@
-import { styles } from 'modules/common/styles';
+import { commonStyles } from 'modules/common/styles';
 import { styled } from 'styles';
 
 export const HeroOuterContainer = styled('div', {
@@ -21,24 +21,38 @@ export const HeroOuterContainer = styled('div', {
 });
 
 export const HeroInnerContainer = styled('div', {
-  ...styles.breakpointsCss,
   display: 'flex',
-  justifyContent: 'space-between',
+  justifyContent: 'flex-end',
+
+  width: '100%',
+  px: 16,
+  '@sm': {
+    maxWidth: 576,
+  },
+  '@md': {
+    justifyContent: 'space-between',
+
+    maxWidth: 768,
+  },
+  '@lg': {
+    maxWidth: 992,
+  },
+  '@xl': {
+    maxWidth: 1200,
+  },
 });
 
 export const TextHeroContainer = styled('div', {
-  display: 'none',
   flexDirection: 'column',
   width: '100%',
   '@md': {
-    display: 'flex',
-
     maxWidth: 547,
   },
 });
 
 export const TodayHighLightCard = styled('div', {
   alignSelf: 'flex-end',
+  justifySelf: 'flex-end',
   borderRadius: '20px',
   px: 16,
   py: 12,
@@ -59,7 +73,7 @@ export const TodayHighLightCard = styled('div', {
 });
 
 export const FeatureContainer = styled('div', {
-  ...styles.breakpointsCss,
+  ...commonStyles.breakpointsCss,
   margin: 'auto',
 });
 
@@ -79,5 +93,21 @@ export const FeatureCard = styled('div', {
 
   '@xs': {
     maxWidth: 358,
+  },
+});
+
+export const MobileView = styled('div', {
+  display: 'flex',
+  flexDirection: 'row',
+  '@md': {
+    display: 'none',
+  },
+});
+
+export const DesktopView = styled('div', {
+  display: 'none',
+  flexDirection: 'row',
+  '@md': {
+    display: 'flex',
   },
 });

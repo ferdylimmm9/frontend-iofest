@@ -92,23 +92,7 @@ html {
   scrollbar-width: thin;
   scrollbar-color: darkgrey transparent;
 }
-*::-webkit-scrollbar {
-  width: 4px;
-  height: 4px;
-}
-*::-webkit-scrollbar-track {
-  background: none;
-  border-radius: 50%;
-}
-*::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  border-radius: 24px;
-}
 
-.no-scrollbar::-webkit-scrollbar{
-  width: 0;
-  height: 0;
-}
 
 *::before {
   box-sizing: border-box;
@@ -341,4 +325,12 @@ tr> .--number{
 .mb16{
   margin-bottom: 16px;
 }
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+.hide-scroll{
+  scrollbar-width: none; 
+}
+
 `;

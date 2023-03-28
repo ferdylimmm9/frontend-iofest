@@ -191,6 +191,7 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
           css={{
             ml: onRenderLeft() ? 8 : 0,
             mr: onRenderRight ? 8 : 0,
+            whiteSpace: 'nowrap',
           }}
         >
           {children}
