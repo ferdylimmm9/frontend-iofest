@@ -34,7 +34,7 @@ export default function Header() {
           </BrandContainer>
           <DesktopNavigationContainer>
             <LinkStyled href="/about-indonesia">About Indonesia</LinkStyled>
-            <LinkStyled href="/search">Find Freelancers</LinkStyled>
+            <LinkStyled href="/freelancers">Find Freelancers</LinkStyled>
             <Button
               variant="primary"
               size="medium"
