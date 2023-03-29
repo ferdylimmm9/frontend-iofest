@@ -4,6 +4,7 @@ export const CardContainer = styled('div', {
   display: 'flex',
   flexDirection: 'column',
   width: '100%',
+  cursor: 'pointer',
   '@sm': {
     width: '45%',
   },
