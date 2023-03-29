@@ -39,12 +39,12 @@ export default function PersonCard(props: Props) {
   return (
     <CardContainer variant={variant}>
       <ImageContainer>
-        {/* <Image
+        <Image
           src="https://engineering.unl.edu/images/staff/Kayla-Person.jpg"
           alt="name"
           fill
           objectFit="cover"
-        /> */}
+        />
       </ImageContainer>
       <Separator gap={16}>
         <Text
