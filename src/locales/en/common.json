@@ -1,4 +1,5 @@
 {
     "test":"test",
-    "review_extra":"({{review}} Reviewers)"
+    "review_extra":"{{review}} Reviewers",
+    "contract_extra":"{{contract}} Contracts"
 }

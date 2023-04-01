@@ -88,6 +88,20 @@ const StyledText = styled(DEFAULT_TAG, {
         color: '$white',
       },
     },
+    view: {
+      desktop: {
+        display: 'none',
+        '@lg': {
+          display: 'block',
+        },
+      },
+      mobile: {
+        display: 'block',
+        '@lg': {
+          display: 'none',
+        },
+      },
+    },
   },
   defaultVariants: {
     variant: 'body',

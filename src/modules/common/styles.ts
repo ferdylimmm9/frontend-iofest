@@ -48,3 +48,21 @@ export const PageContainer = styled('div', {
   ...commonStyles.breakpointsCss,
   margin: 'auto',
 });
+
+export const Container = styled('div', {
+  display: 'flex',
+  flexDirection: 'column',
+  backgroundColor: 'transparent',
+  variants: {
+    background: {
+      black: {
+        backgroundColor: '$primary',
+        color: '$white',
+      },
+      white: {
+        backgroundColor: '$white',
+        color: '$primary',
+      },
+    },
+  },
+});

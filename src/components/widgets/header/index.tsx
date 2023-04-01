@@ -21,6 +21,14 @@ export default function Header() {
   const [opened, { toggle, close }] = useDisclosure(false);
   const { push } = useRouter();
 
+  const menus = React.useMemo<{ href: string; title: string }[]>(
+    () => [
+      { href: '/about-indonesia', title: 'About Indonesia' },
+      { href: '/freelancers', title: 'Find Freelancers' },
+    ],
+    [],
+  );
+
   return (
     <>
       <HeaderOuterContainer>
@@ -47,12 +55,13 @@ export default function Header() {
         </HeaderInnerContainer>
       </HeaderOuterContainer>
       <Separator gap={80} />
-      <Drawer
-        opened={opened}
-        onClose={close}
-        withCloseButton={false}
-        title="test"
-      />
+      <Drawer opened={opened} onClose={close} withCloseButton={false}>
+        {menus.map((menu) => (
+          <LinkStyled href={menu.href} passHref>
+            <Text color="primary">{menu.title}</Text>
+          </LinkStyled>
+        ))}
+      </Drawer>
     </>
   );
 }

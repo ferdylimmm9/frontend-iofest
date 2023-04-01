@@ -1,5 +1,6 @@
 {
     "test":"try",
-    "review_extra":"({{review}} Penilai)"
+    "review_extra":"({{review}} Penilai)",
+    "contract_extra":"{{contract}} Kontrak"
 
 }

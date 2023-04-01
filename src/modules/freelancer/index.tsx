@@ -14,6 +14,7 @@ import {
 import * as React from 'react';
 
 import PersonCard from './components/person-card/person-card';
+import { dummyData } from './data';
 import {
   FilterContainer,
   LookingContainer,
@@ -110,16 +111,22 @@ export default function FreelanceIndex() {
         </FilterContainer>
         <Separator gap={32} />
         <WrappedContainer>
-          <PersonCard variant="secondary" />
-          <PersonCard variant="secondary" />
-          <PersonCard variant="secondary" />
-          <PersonCard variant="secondary" />
-          <PersonCard variant="primary" />
-          <PersonCard variant="primary" />
-          <PersonCard variant="primary" />
-          <PersonCard variant="primary" />
-          <PersonCard variant="primary" />
-          <PersonCard variant="primary" />
+          {dummyData.map((data) => (
+            <PersonCard
+              key={data.id}
+              data={{
+                description: data.description,
+                domicile: data.domicileLocation,
+                id: data.id,
+                image: data.image,
+                name: data.name,
+                rating: data.rating,
+                review: data.reviewer,
+                type: data.type,
+              }}
+              variant="secondary"
+            />
+          ))}
         </WrappedContainer>
       </PageContainer>
       <Separator gap={128} />

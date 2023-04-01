@@ -1,14 +1,15 @@
 import * as React from 'react';
+import { CSS, styled } from 'styles';
 
 interface Props {
   direction?: 'horizontal' | 'vertical' | 'both';
   gap: number;
   children?: React.ReactNode;
-  style?: React.CSSProperties;
+  css?: CSS;
 }
 
 export default function Separator(props: Props) {
-  const { direction, gap: _gap, children, style } = props;
+  const { direction, gap: _gap, children, css } = props;
   const gap = React.useMemo(() => {
     const temp = children ? _gap : (_gap - 2) / 2;
     switch (direction) {
@@ -23,8 +24,9 @@ export default function Separator(props: Props) {
     }
   }, [_gap, children, direction]);
   return (
-    <div style={{ ...style, ...gap }}>
+    <Container css={{ ...css, ...gap }}>
       {children || <div style={{ width: 2, height: 2 }} />}
-    </div>
+    </Container>
   );
 }
+export const Container = styled('div', {});

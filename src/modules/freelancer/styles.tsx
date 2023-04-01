@@ -1,3 +1,4 @@
+import { commonStyles } from 'modules/common/styles';
 import { styled } from 'styles';
 
 export const LookingContainer = styled('div', {
@@ -41,4 +42,33 @@ export const WrappedContainer = styled('div', {
   flexWrap: 'wrap',
   gap: 12,
   margin: 'auto',
+});
+
+export const PackageContainer = styled('div', {
+  border: '1px solid white',
+  paddingLeft: '16px',
+  paddingRight: '16px',
+  paddingTop: '16px',
+  paddingBottom: '16px',
+  display: 'flex',
+  flexDirection: 'column',
+
+  width: '100%',
+  px: 16,
+  '@sm': {
+    maxWidth: 576,
+  },
+  '@md': {
+    maxWidth: 768,
+    paddingLeft: '16px',
+    paddingRight: '16px',
+    paddingTop: '32px',
+    paddingBottom: '32px',
+  },
+  '@lg': {
+    maxWidth: 992,
+  },
+  '@xl': {
+    maxWidth: 1200,
+  },
 });

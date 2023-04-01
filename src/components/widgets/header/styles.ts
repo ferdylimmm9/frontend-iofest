@@ -1,4 +1,5 @@
 import { Burger } from '@mantine/core';
+import colors from 'common/styles/colors';
 import { commonStyles } from 'modules/common/styles';
 import Link from 'next/link';
 import { styled } from 'styles';
@@ -48,8 +49,15 @@ export const LinkStyled = styled(Link, {
   textDecoration: 'none !important',
   px: 24,
   py: 8,
-  color: '$textWhite !important',
+  color: 'white !important',
   '&:hover': {
     opacity: 0.8,
+  },
+  variants: {
+    color: {
+      yellow: {
+        color: `${colors.primary} !important`,
+      },
+    },
   },
 });

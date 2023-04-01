@@ -1,3 +1,4 @@
+import { Accordion } from '@mantine/core';
 import * as Icon from '@phosphor-icons/react';
 import Separator from 'components/common/separator';
 import Text from 'components/common/text';
@@ -59,6 +60,17 @@ export default function ExamplePages() {
         <Text variant="buttonDefault">Button Default</Text>
         <Text variant="buttonSmall">Button Small</Text>
       </Separator>
+      === Accordion ===
+      <Accordion variant="contained" defaultValue={['custom', 'asdf']} multiple>
+        <Accordion.Item value="custom">
+          <Accordion.Control>asdfa</Accordion.Control>
+          <Accordion.Panel>asdfa</Accordion.Panel>
+        </Accordion.Item>
+        <Accordion.Item value="asdf">
+          <Accordion.Control>asdfa</Accordion.Control>
+          <Accordion.Panel>asdfa</Accordion.Panel>
+        </Accordion.Item>
+      </Accordion>
       <Separator gap={16} direction="vertical">
         <Button
           variant="secondary"
