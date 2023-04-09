@@ -1,11 +1,14 @@
 import { Accordion } from '@mantine/core';
 import * as Icon from '@phosphor-icons/react';
+import { useStylesAccordion } from 'components/common/accordion-item/style';
 import Separator from 'components/common/separator';
 import Text from 'components/common/text';
 import Button from 'components/elements/button';
+import { Container } from 'modules/common/styles';
 import * as React from 'react';
 
 export default function ExamplePages() {
+  const { classes } = useStylesAccordion();
   return (
     <div style={{ background: 'white' }}>
       <Separator gap={16} direction="vertical">
@@ -61,16 +64,25 @@ export default function ExamplePages() {
         <Text variant="buttonSmall">Button Small</Text>
       </Separator>
       === Accordion ===
-      <Accordion variant="contained" defaultValue={['custom', 'asdf']} multiple>
-        <Accordion.Item value="custom">
-          <Accordion.Control>asdfa</Accordion.Control>
-          <Accordion.Panel>asdfa</Accordion.Panel>
-        </Accordion.Item>
-        <Accordion.Item value="asdf">
-          <Accordion.Control>asdfa</Accordion.Control>
-          <Accordion.Panel>asdfa</Accordion.Panel>
-        </Accordion.Item>
-      </Accordion>
+      <Container background="black">
+        <Accordion
+          // classNames={classes}
+          // className={classes.root}
+          variant="filled"
+          maw={600}
+          mx="auto"
+          multiple
+        >
+          <Accordion.Item value="custom">
+            <Accordion.Control>asdfa</Accordion.Control>
+            <Accordion.Panel>asdfa</Accordion.Panel>
+          </Accordion.Item>
+          <Accordion.Item value="asdf">
+            <Accordion.Control>asdfa</Accordion.Control>
+            <Accordion.Panel>asdfa</Accordion.Panel>
+          </Accordion.Item>
+        </Accordion>
+      </Container>
       <Separator gap={16} direction="vertical">
         <Button
           variant="secondary"

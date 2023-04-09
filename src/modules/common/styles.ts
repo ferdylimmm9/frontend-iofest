@@ -26,6 +26,11 @@ export const Row = styled('div', {
   alignItems: 'center',
 });
 
+export const FullContainer = styled('div', {
+  display: 'flex',
+  flex: 1,
+  width: '100%',
+});
 export const HalfContainer = styled('div', {
   width: '100%',
   '@lg': {
@@ -52,6 +57,7 @@ export const PageContainer = styled('div', {
 export const Container = styled('div', {
   display: 'flex',
   flexDirection: 'column',
+  flex: 1,
   backgroundColor: 'transparent',
   variants: {
     background: {
