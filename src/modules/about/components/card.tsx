@@ -30,7 +30,12 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-export default function SliderComponent() {
+interface Props {
+  title: string;
+  background: string;
+}
+
+export default function SliderComponent(props: Props) {
   const { classes } = useStyles();
   return (
     <Paper
@@ -38,11 +43,11 @@ export default function SliderComponent() {
       p="xl"
       radius="md"
       sx={{
-        backgroundImage: `url(https://engineering.unl.edu/images/staff/Kayla-Person.jpg)`,
+        backgroundImage: `url(${props.background})`,
       }}
       className={classes.card}
     >
-      <Text className={classes.title}>Text</Text>
+      <Text className={classes.title}>{props.title}</Text>
       <Button variant="wbSecondary">Read More</Button>
     </Paper>
   );

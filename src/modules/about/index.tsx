@@ -63,6 +63,36 @@ export default function AboutIndex() {
     [],
   );
 
+  const islands = React.useMemo<{ island: string; background: string }[]>(
+    () => [
+      {
+        island: 'Sumatera',
+        background: 'https://engineering.unl.edu/images/staff/Kayla-Person.jpg',
+      },
+      {
+        island: 'Kalimantan',
+        background: 'https://engineering.unl.edu/images/staff/Kayla-Person.jpg',
+      },
+      {
+        island: 'Jawa',
+        background: 'https://engineering.unl.edu/images/staff/Kayla-Person.jpg',
+      },
+      {
+        island: 'Sulawesi',
+        background: 'https://engineering.unl.edu/images/staff/Kayla-Person.jpg',
+      },
+      {
+        island: 'Bali & NTT',
+        background: 'https://engineering.unl.edu/images/staff/Kayla-Person.jpg',
+      },
+      {
+        island: 'Papua',
+        background: 'https://engineering.unl.edu/images/staff/Kayla-Person.jpg',
+      },
+    ],
+    [],
+  );
+
   return (
     <>
       <Header />
@@ -117,21 +147,14 @@ export default function AboutIndex() {
           dragFree
           withControls={false}
         >
-          <Carousel.Slide>
-            <SliderComponent />
-          </Carousel.Slide>
-          <Carousel.Slide>
-            <SliderComponent />
-          </Carousel.Slide>
-          <Carousel.Slide>
-            <SliderComponent />
-          </Carousel.Slide>
-          <Carousel.Slide>
-            <SliderComponent />
-          </Carousel.Slide>
-          <Carousel.Slide>
-            <SliderComponent />
-          </Carousel.Slide>
+          {islands.map((island) => (
+            <Carousel.Slide key={island.island}>
+              <SliderComponent
+                title={island.island}
+                background={island.background}
+              />
+            </Carousel.Slide>
+          ))}
         </Carousel>
         <Text variant="heading4Medium" color="white">
           Sumatera
