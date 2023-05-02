@@ -37,10 +37,10 @@ const StyledButton = styled('button', {
           outlineStyle: 'solid',
           outlineWidth: 'medium',
         },
-        // '&:disabled': {
-        //   color: '$typeLightGrey',
-        //   backgroundColor: '$typeDisabled2',
-        // },
+        '&:disabled': {
+          color: '#828181',
+          backgroundColor: '#A8AA08',
+        },
       },
       secondary: {
         backgroundColor: '$primary',
