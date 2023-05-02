@@ -31,7 +31,7 @@ export default function FreelanceShow() {
       <Header />
       <Separator gap={64} />
       <PageContainer>
-        <SectionContainer>
+        <SectionContainer css={{ alignItems: 'flex-start' }}>
           <HalfContainer css={{ order: 3, '@md': { order: 1 } }}>
             <Button variant="wbSecondary">Type</Button>
             <Separator gap={24} />
@@ -384,6 +384,7 @@ export default function FreelanceShow() {
             <Text variant="heading5Regular" color="white">
               Ready to book?
             </Text>
+            <Separator gap={24} />
             <Button>Start Negotiation</Button>
           </Container>
         </PackageContainer>

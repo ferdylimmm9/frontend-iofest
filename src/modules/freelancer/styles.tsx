@@ -14,7 +14,6 @@ export const LookingContainer = styled('div', {
 });
 
 export const SearchButtonContainer = styled('div', {
-  overflow: 'auto',
   display: 'flex',
   flexDirection: 'row',
   scrollbarWidth: 'none',
