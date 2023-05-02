@@ -1,8 +1,6 @@
 import { styled } from 'styles';
 
 export const LoginContainer = styled('div', {
-  backgroundColor: '$white',
-  my: 'auto',
   mx: 16,
 
   px: 16,

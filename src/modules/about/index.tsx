@@ -184,7 +184,12 @@ export default function AboutIndex() {
         <Separator gap={24} />
         <SectionContainer css={{ alignItems: 'flex-start' }}>
           <div style={{ flex: 2 }}>
-            <Text variant="heading5Regular" color="white" align="justify">
+            <Text
+              variant="body1Regular"
+              css={{ '@md': typography.heading5Regular }}
+              color="white"
+              align="justify"
+            >
               Sumatra is one of the Sunda Islands of western Indonesia. It is
               the largest island that is fully within Indonesian territory, as
               well as the sixth-largest island in the world at 475,807.63 km2

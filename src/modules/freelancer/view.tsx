@@ -177,7 +177,9 @@ export default function FreelanceShow() {
             variant="contained"
             multiple
             radius="xs"
-            style={{ width: '100%', backgroundColor: 'white' }}
+            style={{
+              width: '100%',
+            }}
             defaultValue={['package_a']}
           >
             <AccordionItem
@@ -408,7 +410,7 @@ export default function FreelanceShow() {
           variant="contained"
           multiple
           radius="xs"
-          style={{ width: '100%', backgroundColor: 'white' }}
+          style={{ width: '100%' }}
           defaultValue={['package_a']}
         >
           {[

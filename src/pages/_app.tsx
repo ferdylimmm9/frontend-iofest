@@ -34,7 +34,7 @@ function App({ Component, pageProps }: AppProps) {
       <MantineProvider
         withGlobalStyles
         withNormalizeCSS
-        theme={{ fontFamily: 'Rubik' }}
+        theme={{ fontFamily: 'Rubik', colorScheme: 'dark' }}
       >
         <TypographyStylesProvider>
           <Notifications
