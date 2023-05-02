@@ -18,6 +18,7 @@ import {
   SectionContainer,
 } from 'modules/common/styles';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 import * as React from 'react';
 
@@ -25,6 +26,12 @@ import { PackageContainer } from './styles';
 
 export default function FreelanceShow() {
   const { t } = useTranslation();
+
+  const router = useRouter();
+
+  const onNavigate = React.useCallback(() => {
+    router.push(`/freelancers/1/contracts`);
+  }, [router]);
 
   return (
     <>
@@ -384,8 +391,7 @@ export default function FreelanceShow() {
             <Text variant="heading5Regular" color="white">
               Ready to book?
             </Text>
-            <Separator gap={24} />
-            <Button>Start Negotiation</Button>
+            <Button onClick={onNavigate}>Start Negotiation</Button>
           </Container>
         </PackageContainer>
         <Separator gap={48} />
