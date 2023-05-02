@@ -1,4 +1,4 @@
-import { Paper, createStyles, rem } from '@mantine/core';
+import { BackgroundImage, createStyles, rem } from '@mantine/core';
 import typography from 'common/styles/typography';
 import Text from 'components/common/text';
 import Button from 'components/elements/button';
@@ -38,17 +38,15 @@ interface Props {
 export default function SliderComponent(props: Props) {
   const { classes } = useStyles();
   return (
-    <Paper
-      shadow="md"
+    <BackgroundImage
       p="xl"
       radius="md"
-      sx={{
-        backgroundImage: `url(${props.background})`,
-      }}
+      src={props.background}
       className={classes.card}
+      miw={300}
     >
       <Text className={classes.title}>{props.title}</Text>
       <Button variant="wbSecondary">Read More</Button>
-    </Paper>
+    </BackgroundImage>
   );
 }

@@ -7,57 +7,37 @@ import Text from 'components/common/text';
 import Header from 'components/widgets/header';
 import {
   FullContainer,
-  HalfContainer,
   PageContainer,
-  Row,
   SectionContainer,
 } from 'modules/common/styles';
 import Image from 'next/image';
 import * as React from 'react';
 
 import SliderComponent from './components/card';
+import LabelContent from './components/label-content';
+import SpoilerCard from './components/spoiler-card';
 import { ImageContainer } from './styles';
-
-function LabelContent(props: { label: string; content: string }) {
-  return (
-    <>
-      <Row>
-        <HalfContainer>
-          <Text variant="heading6Regular" color="white">
-            {props.label}
-          </Text>
-        </HalfContainer>
-        <Separator gap={24} />
-        <HalfContainer>
-          <Text variant="heading6Regular" color="white">
-            {props.content}
-          </Text>
-        </HalfContainer>
-      </Row>
-      <Separator gap={16} />
-    </>
-  );
-}
 
 export default function AboutIndex() {
   const mobile = useMediaQuery(`(max-width: ${breakpoints.md})`);
+
   const informations = React.useMemo<{ label: string; content: string }[]>(
     () => [
-      { label: 'Population:', content: '59,977,300 (mid 2022)' },
-      { label: 'Area:', content: '473,481 km2' },
-      { label: 'Timezone:', content: 'Waktu Indonesia Barat (UTC+7)' },
+      { label: 'Population', content: ': 59,977,300 (mid 2022)' },
+      { label: 'Area', content: ': 473,481 km2' },
+      { label: 'Timezone', content: ': Waktu Indonesia Barat (UTC+7)' },
       {
-        label: 'Ethnic Groups:',
-        content: 'Acehnese, Batak, Gayonese, Lampung, Malay, etc.',
+        label: 'Ethnic Groups',
+        content: ': Acehnese, Batak, Gayonese, Lampung, Malay, etc.',
       },
       {
-        label: 'Provinces:',
+        label: 'Provinces',
         content:
-          'Aceh, North Sumatra, West Sumatra, Riau, Jambi, Bengkulu, South Sumatra, Lampung',
+          ': Aceh, North Sumatra, West Sumatra, Riau, Jambi, Bengkulu, South Sumatra, Lampung',
       },
       {
-        label: 'Largest City:',
-        content: 'Medan',
+        label: 'Largest City',
+        content: ': Medan',
       },
     ],
     [],
@@ -67,27 +47,49 @@ export default function AboutIndex() {
     () => [
       {
         island: 'Sumatera',
-        background: 'https://engineering.unl.edu/images/staff/Kayla-Person.jpg',
+        background: '/assets/fake-image.png',
       },
       {
         island: 'Kalimantan',
-        background: 'https://engineering.unl.edu/images/staff/Kayla-Person.jpg',
+        background: '/assets/fake-image.png',
       },
       {
         island: 'Jawa',
-        background: 'https://engineering.unl.edu/images/staff/Kayla-Person.jpg',
+        background: '/assets/fake-image.png',
       },
       {
         island: 'Sulawesi',
-        background: 'https://engineering.unl.edu/images/staff/Kayla-Person.jpg',
+        background: '/assets/fake-image.png',
       },
       {
         island: 'Bali & NTT',
-        background: 'https://engineering.unl.edu/images/staff/Kayla-Person.jpg',
+        background: '/assets/fake-image.png',
       },
       {
         island: 'Papua',
-        background: 'https://engineering.unl.edu/images/staff/Kayla-Person.jpg',
+        background: '/assets/fake-image.png',
+      },
+    ],
+    [],
+  );
+
+  const newsList = React.useMemo<
+    { title: string; description: string; content: string; image: string }[]
+  >(
+    () => [
+      {
+        title: 'Elit sunt ut sint consectetur eiusmod.',
+        description: 'Excepteur eiusmod eiusmod anim ad fugiat.',
+        content:
+          'Sint excepteur enim elit aliquip excepteur mollit fugiat deserunt fugiat. Labore non qui qui ullamco quis ex esse eiusmod quis quis qui occaecat veniam. Id ex amet cillum reprehenderit cupidatat incididunt excepteur officia sunt.Irure elit eu incididunt quis mollit incididunt esse tempor duis. Tempor eu exercitation cillum cupidatat consequat. Non ipsum ad tempor cillum. Ut officia occaecat occaecat sunt. Amet eu ipsum non reprehenderit amet labore. Incididunt quis enim exercitation et.Amet proident voluptate dolor labore sit deserunt. Qui sit commodo proident incididunt minim irure mollit est qui cupidatat esse. Consequat labore veniam duis quis culpa nisi sit dolore adipisicing ex veniam elit incididunt ipsum. Incididunt eu laboris id culpa esse consectetur aute fugiat consectetur tempor id adipisicing consectetur amet. Ea id sint ut nostrud mollit esse minim consequat cillum exercitation ex cillum magna eu. Consectetur aliqua non tempor officia fugiat sunt ut consectetur dolor culpa ullamco voluptate laborum adipisicing. Lorem ullamco aliqua magna aute nostrud Lorem Lorem esse velit amet ex. Excepteur velit aute exercitation dolore ad ad dolore. Labore magna excepteur nulla occaecat labore commodo voluptate commodo ad ad.',
+        image: '/assets/fake-image.png',
+      },
+      {
+        title: 'Elit sunt ut sint consectetur eiusmod.',
+        description: 'Excepteur eiusmod eiusmod anim ad fugiat.',
+        content:
+          'Sint excepteur enim elit aliquip excepteur mollit fugiat deserunt fugiat. Labore non qui qui ullamco quis ex esse eiusmod quis quis qui occaecat veniam. Id ex amet cillum reprehenderit cupidatat incididunt excepteur officia sunt.Irure elit eu incididunt quis mollit incididunt esse tempor duis. Tempor eu exercitation cillum cupidatat consequat. Non ipsum ad tempor cillum. Ut officia occaecat occaecat sunt. Amet eu ipsum non reprehenderit amet labore. Incididunt quis enim exercitation et.Amet proident voluptate dolor labore sit deserunt. Qui sit commodo proident incididunt minim irure mollit est qui cupidatat esse. Consequat labore veniam duis quis culpa nisi sit dolore adipisicing ex veniam elit incididunt ipsum. Incididunt eu laboris id culpa esse consectetur aute fugiat consectetur tempor id adipisicing consectetur amet. Ea id sint ut nostrud mollit esse minim consequat cillum exercitation ex cillum magna eu. Consectetur aliqua non tempor officia fugiat sunt ut consectetur dolor culpa ullamco voluptate laborum adipisicing. Lorem ullamco aliqua magna aute nostrud Lorem Lorem esse velit amet ex. Excepteur velit aute exercitation dolore ad ad dolore. Labore magna excepteur nulla occaecat labore commodo voluptate commodo ad ad.',
+        image: '/assets/fake-image.png',
       },
     ],
     [],
@@ -163,47 +165,61 @@ export default function AboutIndex() {
         <SectionContainer css={{ alignItems: 'flex-start' }}>
           <ImageContainer>
             <Image
-              alt=""
-              src="https://engineering.unl.edu/images/staff/Kayla-Person.jpg"
+              alt="fake-image"
+              src="/assets/fake-image.png"
               fill
               objectFit="cover"
             />
           </ImageContainer>
-          <div>
+          <Separator gap={24} />
+          <FullContainer css={{ flexDirection: 'column' }}>
             {informations.map((information) => (
               <LabelContent
                 content={information.content}
                 label={information.label}
               />
             ))}
-          </div>
+          </FullContainer>
         </SectionContainer>
         <Separator gap={24} />
-        <SectionContainer>
-          <Text variant="heading5Regular" color="white" align="justify">
-            Sumatra is one of the Sunda Islands of western Indonesia. It is the
-            largest island that is fully within Indonesian territory, as well as
-            the sixth-largest island in the world at 475,807.63 km2 (182,812
-            mi.2), including adjacent islands such as the Simeulue, Nias,
-            Mentawai, Enggano, Riau Islands, Bangka Belitung and Krakatoa
-            archipelago. Sumatra is an elongated landmass spanning a diagonal
-            northwest–southeast axis. The Indian Ocean borders the northwest,
-            west, and southwest coasts of Sumatra, with the island chain of
-            Simeulue, Nias, Mentawai, and Enggano off the western coast. In the
-            northeast, the narrow Strait of Malacca separates the island from
-            the Malay Peninsula, which is an extension of the Eurasian
-            continent. In the southeast, the narrow Sunda Strait, containing the
-            Krakatoa Archipelago, separates Sumatra from Java. The northern tip
-            of Sumatra is near the Andaman Islands, while off the southeastern
-            coast lie the islands of Bangka and Belitung, Karimata Strait and
-            the Java Sea. The Bukit Barisan mountains, which contain several
-            active volcanoes, form the backbone of the island, while the
-            northeastern area contains large plains and lowlands with swamps,
-            mangrove forest and complex river systems. The equator crosses the
-            island at its centre in West Sumatra and Riau provinces. The climate
-            of the island is tropical, hot, and humid. Lush tropical rain forest
-            once dominated the landscape.
-          </Text>
+        <SectionContainer css={{ alignItems: 'flex-start' }}>
+          <div style={{ flex: 2 }}>
+            <Text variant="heading5Regular" color="white" align="justify">
+              Sumatra is one of the Sunda Islands of western Indonesia. It is
+              the largest island that is fully within Indonesian territory, as
+              well as the sixth-largest island in the world at 475,807.63 km2
+              (182,812 mi.2), including adjacent islands such as the Simeulue,
+              Nias, Mentawai, Enggano, Riau Islands, Bangka Belitung and
+              Krakatoa archipelago. Sumatra is an elongated landmass spanning a
+              diagonal northwest–southeast axis. The Indian Ocean borders the
+              northwest, west, and southwest coasts of Sumatra, with the island
+              chain of Simeulue, Nias, Mentawai, and Enggano off the western
+              coast. In the northeast, the narrow Strait of Malacca separates
+              the island from the Malay Peninsula, which is an extension of the
+              Eurasian continent. In the southeast, the narrow Sunda Strait,
+              containing the Krakatoa Archipelago, separates Sumatra from Java.
+              The northern tip of Sumatra is near the Andaman Islands, while off
+              the southeastern coast lie the islands of Bangka and Belitung,
+              Karimata Strait and the Java Sea. The Bukit Barisan mountains,
+              which contain several active volcanoes, form the backbone of the
+              island, while the northeastern area contains large plains and
+              lowlands with swamps, mangrove forest and complex river systems.
+              The equator crosses the island at its centre in West Sumatra and
+              Riau provinces. The climate of the island is tropical, hot, and
+              humid. Lush tropical rain forest once dominated the landscape.
+            </Text>
+          </div>
+          <Separator gap={24} />
+          <div style={{ flex: 1 }}>
+            {newsList.map((news) => (
+              <SpoilerCard
+                content={news.content}
+                description={news.description}
+                image={news.image}
+                title={news.title}
+              />
+            ))}
+          </div>
         </SectionContainer>
       </PageContainer>
       <Separator gap={128} />

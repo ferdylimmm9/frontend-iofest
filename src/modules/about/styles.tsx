@@ -2,8 +2,8 @@ import { styled } from 'styles';
 
 export const ImageContainer = styled('div', {
   position: 'relative',
-  width: '281px',
-  height: '420px',
+  width: '300px',
+  height: '431px',
 
   objectFit: 'contain',
 });
