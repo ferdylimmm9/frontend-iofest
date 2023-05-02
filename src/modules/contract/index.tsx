@@ -278,7 +278,9 @@ export default function CreateContract() {
               Freelancer has not signed this contract
             </Text>
             <Separator gap={16} />
-            <Button variant="primary" disabled>Sign</Button>
+            <Button variant="primary" disabled>
+              Sign
+            </Button>
           </HalfContainer>
         </FullContainer>
         <Separator gap={80} />

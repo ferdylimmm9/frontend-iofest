@@ -1,4 +1,3 @@
-import { commonStyles } from 'modules/common/styles';
 import { styled } from 'styles';
 
 export const LookingContainer = styled('div', {
