@@ -1,3 +1,4 @@
+import { Carousel } from '@mantine/carousel';
 import { TextInput } from '@mantine/core';
 import { FunnelSimple } from '@phosphor-icons/react';
 import typography from 'common/styles/typography';
@@ -16,13 +17,7 @@ import * as React from 'react';
 
 import PersonCard from './components/person-card/person-card';
 import { dummyData } from './data';
-import {
-  FilterContainer,
-  LookingContainer,
-  SearchButtonContainer,
-  WrappedContainer,
-} from './styles';
-import { Carousel } from '@mantine/carousel';
+import { FilterContainer, LookingContainer, WrappedContainer } from './styles';
 
 export default function FreelanceIndex() {
   const [query, setQuery] = React.useState('');

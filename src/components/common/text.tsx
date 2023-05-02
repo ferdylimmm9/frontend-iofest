@@ -23,6 +23,9 @@ const StyledText = styled(DEFAULT_TAG, {
       right: {
         textAlign: 'right',
       },
+      justify: {
+        textAlign: 'justify',
+      },
     },
     size: {
       xxs: {
