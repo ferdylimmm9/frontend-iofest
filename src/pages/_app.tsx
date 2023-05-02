@@ -1,6 +1,6 @@
 import 'styles/globals.css';
 import { MantineProvider, TypographyStylesProvider } from '@mantine/core';
-import { NotificationsProvider } from '@mantine/notifications';
+import { Notifications } from '@mantine/notifications';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { queryClient } from 'common/repositories/query-client';
 import colors from 'common/styles/colors';
@@ -37,16 +37,15 @@ function App({ Component, pageProps }: AppProps) {
         theme={{ fontFamily: 'Rubik' }}
       >
         <TypographyStylesProvider>
-          <NotificationsProvider
+          <Notifications
             limit={10}
             position="top-right"
             zIndex={9999999}
             autoClose={4000}
-          >
-            <QueryClientProvider client={queryClient}>
-              <Component {...pageProps} />
-            </QueryClientProvider>
-          </NotificationsProvider>
+          />
+          <QueryClientProvider client={queryClient}>
+            <Component {...pageProps} />
+          </QueryClientProvider>
         </TypographyStylesProvider>
       </MantineProvider>
     </>
@@ -332,5 +331,4 @@ tr> .--number{
 .hide-scroll{
   scrollbar-width: none; 
 }
-
 `;

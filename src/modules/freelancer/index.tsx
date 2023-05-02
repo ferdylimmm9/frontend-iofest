@@ -6,6 +6,7 @@ import Text from 'components/common/text';
 import Button from 'components/elements/button';
 import Header from 'components/widgets/header';
 import {
+  FullContainer,
   HalfContainer,
   PageContainer,
   Row,
@@ -21,6 +22,7 @@ import {
   SearchButtonContainer,
   WrappedContainer,
 } from './styles';
+import { Carousel } from '@mantine/carousel';
 
 export default function FreelanceIndex() {
   const [query, setQuery] = React.useState('');
@@ -88,15 +90,30 @@ export default function FreelanceIndex() {
               I am looking for...
             </Text>
             <Separator gap={24} />
-            <SearchButtonContainer>
-              <Button variant="wbSecondary">Tour Guiding</Button>
-              <Separator gap={24} />
-
-              <Button variant="wbSecondary">Translator</Button>
-              <Separator gap={24} />
-
-              <Button variant="wbSecondary">Language Instructor</Button>
-            </SearchButtonContainer>
+            <FullContainer>
+              <Carousel
+                withControls={false}
+                withIndicators={false}
+                align="start"
+                dragFree
+                slideSize="10%"
+                slideGap="sm"
+                slidesToScroll={1}
+                loop
+              >
+                <Carousel.Slide>
+                  <Button onClick={() => {}} variant="wbSecondary">
+                    Tour Guiding
+                  </Button>
+                </Carousel.Slide>
+                <Carousel.Slide>
+                  <Button variant="wbSecondary">Translator</Button>
+                </Carousel.Slide>
+                <Carousel.Slide>
+                  <Button variant="wbSecondary">Language Instructor</Button>
+                </Carousel.Slide>
+              </Carousel>
+            </FullContainer>
           </LookingContainer>
           <Separator gap={24} />
           <Button
