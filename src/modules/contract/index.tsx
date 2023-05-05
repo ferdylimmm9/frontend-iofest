@@ -12,12 +12,9 @@ import {
   SectionContainer,
 } from 'modules/common/styles';
 import Image from 'next/image';
-// import useTranslation from 'next-translate/useTranslation';
 import * as React from 'react';
 
 export default function CreateContract() {
-  // const { t } = useTranslation();
-
   const [query, setQuery] = React.useState('');
 
   return (
