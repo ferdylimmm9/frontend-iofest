@@ -1,5 +1,4 @@
 import { Spoiler, TextInput } from '@mantine/core';
-import * as Icons from '@phosphor-icons/react';
 import typography from 'common/styles/typography';
 import Separator from 'components/common/separator';
 import Text from 'components/common/text';
@@ -13,14 +12,12 @@ import {
   SectionContainer,
 } from 'modules/common/styles';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 // import useTranslation from 'next-translate/useTranslation';
 import * as React from 'react';
 
 export default function CreateContract() {
   // const { t } = useTranslation();
 
-  const { route } = useRouter();
   const [query, setQuery] = React.useState('');
 
   return (
@@ -28,6 +25,14 @@ export default function CreateContract() {
       <Header />
       <Separator gap={64} />
       <PageContainer>
+        <Text
+          variant="heading3Regular"
+          color="white"
+          css={{ '@md': typography.heading3Medium }}
+        >
+          Create Contract
+        </Text>
+        <Separator gap={48} />
         <SectionContainer>
           <HalfContainer css={{ order: 3, '@md': { order: 1 } }}>
             <Button variant="wbSecondary">Type</Button>
