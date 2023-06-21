@@ -1,6 +1,7 @@
 import { Button, Container, Drawer } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { modals } from '@mantine/modals';
+import { notifications } from '@mantine/notifications';
 import Text from 'components/common/text';
 import CheckboxField from 'components/elements/checkbox-field';
 import DatePickerField from 'components/elements/date-picker-field';
@@ -60,6 +61,31 @@ export default function Example() {
       <Container>
         <Button onClick={onClickModals}> onClick Modal</Button>
         <Button onClick={onClickModalConfirm}> onClick Modal Confirm</Button>
+        <Button
+          variant="outline"
+          onClick={() =>
+            notifications.show({
+              title: 'Default notification',
+              message: 'Hey there, your code is awesome! 🤥',
+              color: 'red', //change this
+            })
+          }
+        >
+          Show notification Red
+        </Button>
+        <Button
+          variant="outline"
+          onClick={() =>
+            notifications.show({
+              title: 'Default notification',
+              message: 'Hey there, your code is awesome! 🤥',
+              color: 'teal', //change this
+            })
+          }
+        >
+          Show notification Teal
+        </Button>
+
         <Button onClick={open}>Drawer</Button>
         <Drawer onClose={close} opened={opened}>
           adsfa
