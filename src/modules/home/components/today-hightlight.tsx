@@ -8,7 +8,11 @@ import { TodayHighLightCard } from 'modules/home/styles';
 export default function TodayHighlight() {
   return (
     <TodayHighLightCard>
-      <Text variant="body1Medium" css={{ '@md': typography.heading5Medium }}>
+      <Text
+        variant="body1Medium"
+        color="black"
+        css={{ '@md': typography.heading5Medium }}
+      >
         Today's Highlight
       </Text>
       <Separator gap={6} />
@@ -19,12 +23,14 @@ export default function TodayHighlight() {
         <div>
           <Text
             variant="caption1Regular"
+            color="black"
             css={{ '@md': typography.heading6Regular }}
           >
             Nusa Penida Beach
           </Text>
           <Text
             variant="caption2Medium"
+            color="black"
             css={{ '@md': typography.heading6Medium }}
           >
             Bali
@@ -33,7 +39,11 @@ export default function TodayHighlight() {
       </Row>
       <Separator gap={8} />
 
-      <Text variant="caption2Regular" css={{ '@md': typography.body3Regular }}>
+      <Text
+        variant="caption2Regular"
+        color="black"
+        css={{ '@md': typography.body3Regular }}
+      >
         Nusa Penida has become one of the most popular places to visit near Bali
         in recent years. One of the main factors in its rise to popularity is
         that Nusa Penida’s Beaches are just so damn epic.

@@ -1,5 +1,6 @@
 import 'styles/globals.css';
 import { MantineProvider, TypographyStylesProvider } from '@mantine/core';
+import { ModalsProvider } from '@mantine/modals';
 import { Notifications } from '@mantine/notifications';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { queryClient } from 'common/repositories/query-client';
@@ -7,16 +8,27 @@ import colors from 'common/styles/colors';
 import yupEnValidation from 'locales/en/validation.yup';
 import yupIdValidation from 'locales/id/validation.yup';
 import merge from 'lodash/merge';
+import { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import appWithI18n from 'next-translate/appWithI18n';
 import * as React from 'react';
+import type { ReactElement, ReactNode } from 'react';
 import { setLocale } from 'yup';
 
 import i18nConfig from '../../i18n';
 
-function App({ Component, pageProps }: AppProps) {
+export type NextPageWithLayout<P = object, IP = P> = NextPage<P, IP> & {
+  getLayout?: (page: ReactElement) => ReactNode;
+};
+
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout;
+};
+
+function App({ Component, pageProps }: AppPropsWithLayout) {
   const { locale } = useRouter();
+  const getLayout = Component.getLayout;
 
   React.useEffect(() => {
     if (locale === 'en') {
@@ -43,9 +55,19 @@ function App({ Component, pageProps }: AppProps) {
             zIndex={9999999}
             autoClose={4000}
           />
-          <QueryClientProvider client={queryClient}>
-            <Component {...pageProps} />
-          </QueryClientProvider>
+          <ModalsProvider
+            modalProps={{
+              centered: true,
+            }}
+          >
+            <QueryClientProvider client={queryClient}>
+              {getLayout ? (
+                getLayout(<Component {...pageProps} />)
+              ) : (
+                <Component {...pageProps} />
+              )}
+            </QueryClientProvider>
+          </ModalsProvider>
         </TypographyStylesProvider>
       </MantineProvider>
     </>

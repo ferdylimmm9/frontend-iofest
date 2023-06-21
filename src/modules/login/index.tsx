@@ -1,8 +1,10 @@
+import { Card, Paper } from '@mantine/core';
 import Separator from 'components/common/separator';
 import Text from 'components/common/text';
 import Button from 'components/elements/button';
-import Input from 'components/elements/field';
 import Form from 'components/elements/form';
+import PasswordField from 'components/elements/password-field';
+import TextField from 'components/elements/text-field';
 import Header from 'components/widgets/header';
 import useYupValidationResolver from 'hooks/use-yup-validation-resolver';
 import * as React from 'react';
@@ -50,39 +52,41 @@ export default function Login() {
       <FullScreen>
         <LoginContainer>
           <Form methods={methods} onSubmit={onSubmit}>
-            <Text variant="heading3Medium">Login</Text>
-            <Separator gap={32} />
+            <Card p={32}>
+              <Text variant="heading3Medium">Login</Text>
+              <Separator gap={32} />
 
-            <Input
-              type="text"
-              name="email"
-              label="Email Address"
-              placeholder="email"
-              description="markdown"
-            />
-            <Separator gap={24} />
+              <TextField
+                type="text"
+                name="email"
+                label="Email Address"
+                placeholder="email"
+                description="markdown"
+              />
+              <Separator gap={24} />
 
-            <Input
-              type="password"
-              name="password"
-              label="Password"
-              placeholder="password"
-              description="markdown"
-            />
+              <PasswordField
+                type="password"
+                name="password"
+                label="Password"
+                placeholder="password"
+                description="markdown"
+              />
 
-            <Separator gap={32} />
+              <Separator gap={32} />
 
-            <Button variant="wbPrimary" css={style.buttonContainer}>
-              Login
-            </Button>
-            <Separator gap={24} />
+              <Button variant="wbPrimary" css={style.buttonContainer}>
+                Login
+              </Button>
+              <Separator gap={24} />
 
-            <Text variant="heading6Regular">Don't have an account</Text>
-            <Separator gap={4} />
+              <Text variant="heading6Regular">Don't have an account</Text>
+              <Separator gap={4} />
 
-            <Button variant="wbSecondary" css={style.buttonContainer}>
-              Sign up
-            </Button>
+              <Button variant="wbSecondary" css={style.buttonContainer}>
+                Sign up
+              </Button>
+            </Card>
           </Form>
         </LoginContainer>
       </FullScreen>

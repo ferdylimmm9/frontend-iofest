@@ -7,8 +7,6 @@ import {
 
 import { FormContext, FormStateProps } from './context';
 
-export * from './context';
-
 enum RequestMethod {
   GET = 'GET',
   HEAD = 'HEAD',
@@ -28,69 +26,6 @@ interface FormProps {
   defaultEditable?: boolean;
   onSubmit: SubmitHandler<any>;
 }
-
-// interface FormFooterProps {
-//   showCancel?: boolean;
-//   showDelete?: boolean;
-//   showSubmit?: boolean;
-//   onDelete?: () => void;
-//   onCancel?: () => void;
-//   isLoading?: boolean;
-//   renderRight?: React.ReactNode;
-// }
-
-// export function FormFooter(props: FormFooterProps) {
-//   const { t } = useTranslation();
-//   const {
-//     showCancel = false,
-//     showDelete = false,
-//     showSubmit = true,
-//     onDelete,
-//     isLoading,
-//     renderRight,
-//     onCancel,
-//   } = props;
-//   return (
-//     <div className={formStyles.buttonContainer}>
-//       <div className={formStyles.buttonLeftContent}>
-//         {showDelete && (
-//           <>
-//             <Button
-//               variant="secondary"
-//               type="button"
-//               onClick={onDelete}
-//               loading={isLoading}
-//               error
-//             >
-//               {t('common:delete')}
-//             </Button>
-//             <div
-//               style={{
-//                 marginLeft: 24,
-//               }}
-//             />
-//           </>
-//         )}
-//       </div>
-//       <div className={formStyles.buttonRightContent}>
-//         {showCancel && (
-//           <>
-//             <Button variant="secondary" onClick={onCancel}>
-//               {t('common:cancel')}
-//             </Button>
-//             <div
-//               style={{
-//                 marginLeft: 16,
-//               }}
-//             />
-//           </>
-//         )}
-//         {showSubmit && <Input type="submit" loading={isLoading} />}
-//         {renderRight}
-//       </div>
-//     </div>
-//   );
-// }
 
 export default function Form(props: FormProps) {
   const [isEditable, setIsEditable] = React.useState(

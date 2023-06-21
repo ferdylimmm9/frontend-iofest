@@ -1,5 +1,9 @@
 {
-    "test":"test",
-    "review_extra":"{{review}} Reviewers",
-    "contract_extra":"{{contract}} Contracts"
+  "test": "test",
+  "review_extra": "{{review}} Reviewers",
+  "contract_extra": "{{contract}} Contracts",
+  "banners": "Banners",
+  "products": "Products",
+  "news": "News",
+  "contacts": "Contacts"
 }

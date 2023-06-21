@@ -1,6 +1,9 @@
 {
-    "test":"try",
-    "review_extra":"({{review}} Penilai)",
-    "contract_extra":"{{contract}} Kontrak"
-
+  "test": "try",
+  "review_extra": "({{review}} Penilai)",
+  "contract_extra": "{{contract}} Kontrak",
+  "banners": "Banner",
+  "products": "Produk",
+  "news": "Berita",
+  "contacts": "Kontak"
 }
